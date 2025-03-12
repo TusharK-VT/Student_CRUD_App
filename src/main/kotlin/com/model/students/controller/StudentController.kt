@@ -38,6 +38,13 @@ class StudentController(private val studentService: StudentService) {
         }
     }
 
-
-
+    @DeleteMapping("/{id}")
+    fun deleteStudent(@PathVariable id: Long): ResponseEntity<Void> {
+        return if (studentService.getStudentById(id) != null) {
+            studentService.deleteStudent(id)
+            ResponseEntity.noContent().build()
+        } else {
+            ResponseEntity.notFound().build()
+        }
+    }
 }
