@@ -16,7 +16,7 @@ class StudentServiceTests @Autowired constructor (
 ) {
     private val studentService = StudentService(studentRepository)
 
-    @Disabled
+
     @Test
     fun `test create student`() {
         val student = Student(name = "tushar", email = "tushar@123")
@@ -68,6 +68,7 @@ class StudentServiceTests @Autowired constructor (
         assertEquals("kot@123", result.email)
     }
 
+    @Disabled
     @Test
     fun `test delete student`()
     {

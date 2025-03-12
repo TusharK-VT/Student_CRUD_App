@@ -10,8 +10,8 @@ data class Student(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
-    var name: String,
-    var email: String
+    var name: String="",
+    var email: String=""
 
 )
 

@@ -31,7 +31,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation ("com.h2database:h2")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation ("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -46,11 +46,6 @@ kotlin {
 	}
 }
 
-allOpen {
-	annotation("jakarta.persistence.Entity")
-	annotation("jakarta.persistence.MappedSuperclass")
-	annotation("jakarta.persistence.Embeddable")
-}
 
 tasks.withType<Test> {
 	useJUnitPlatform()
